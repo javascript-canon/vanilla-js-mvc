@@ -5,38 +5,25 @@
   "author": "Kai 'kaidez' Gittens",
   "license": "ISC",
   "main": "app.js",
-  "files": [
-    "app.js",
-    "public",
-    "views",
-    "vanilla-js-mvc"
-  ],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/kaidez/javascript-canon"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javascript-canon/vanilla-js-mvc.git"
   },
   "scripts": {
-    "server": "nodemon -e scss,ejs,js --watch $DIR",
+    "server": "nodemon -e scss,ejs,js --watch",
     "build-js": "browserify js-build/*.js | uglifyjs -mc > public/js/scripts.js",
     "build-sass": "node-sass css-build/style.scss css-build/style.css",
-    "build-sass-home": "node-sass css-build/style.scss css-build/style.css",
     "concat-css": "cat css-build/*.css > css-build/build-sandbox/css/style.css",
-    "concat-css-home": "cat css-build/*.css > css-build/build-sandbox/css/style.css",
     "uncss-sandbox-html": "ejs-cli --base-dir views/ '*.ejs' --out css-build/build-sandbox/",
-    "uncss-sandbox-html-home": "ejs-cli --base-dir views/ '*.ejs' --out css-build/build-sandbox/",
     "uncss": "grunt",
     "clean-css": "cleancss css-build/build-sandbox/css/style.css --s0 -o public/css/style.css",
-    "clean-css-home": "cleancss css-build/build-sandbox/css/style.css --s0 -o public/css/style.css",
-    "build-css": "npm run uncss-sandbox-html-home && npm run build-sass && npm run concat-css && npm run uncss && npm run clean-css",
-    "build-css-home": "npm run uncss-sandbox-html-home && npm run build-sass && npm run concat-css && npm run uncss && npm run clean-css",
     "build": "npm run build-css && npm run build-js",
     "watch-js": "nodemon -e js -w js-build -x 'npm run build-js'",
     "watch-css": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run build-css'",
     "start": "npm run server & npm run watch-js & npm run watch-css",
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
-    "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css",
-    "copy-normalize-home": "ncp node_modules/normalize.css/normalize.css css-build-home/normalize.css css-build-home/normalize.css"
+    "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
@@ -45,8 +32,9 @@
     "grunt-cli": "^1.2.0",
     "grunt-uncss": "^0.6.1",
     "ncp": "^2.0.0",
-    "node-sass": "^3.13.0",
+    "node-sass": "^4.0.0",
     "nodemon": "1.11.0",
+    "normalize.css": "^5.0.0",
     "reload": "^1.1.0",
     "uglifyjs": "^2.4.10"
   },
@@ -55,7 +43,6 @@
     "express": "^4.14.0",
     "http2": "^3.3.6",
     "jquery": "^3.1.0",
-    "normalize.css": "^5.0.0",
     "underscore": "^1.8.3"
   }
 }
