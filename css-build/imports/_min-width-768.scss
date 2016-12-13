@@ -60,11 +60,6 @@
 
       font-size: 18px;
     }
-
-    &--homepage-link {
-      margin-top: 20px
-    }
-
     &__list {
       margin-top: 4px;
       padding-left: 0;
@@ -77,34 +72,21 @@
       cursor: pointer;
     }
 
-    &__list-item-home {
-      margin-bottom: 2px;
-      list-style-type: none;
 
-      cursor: pointer;
-    }
-
-    &__button,
-    &__button-home {
+    &__button {
 
       &:link {
         color:#000;
-        text-decoration: none;
       }
 
       &:hover {
         color:#000;
-        text-decoration: underline;
       }
 
       &:visited {
         color:#000;
-        text-decoration: none;
       }
 
-    }
-    &--link-top-padding {
-      margin-top:15px;
     }
   }
   /* Stop ".nav"...BEM style */
@@ -191,7 +173,7 @@
   /* Style <footer> */
   footer {
     position: fixed;
-    top: 490px;
+    top: 460px;
     margin-left: 22px;
 
     font-size: 12px;
