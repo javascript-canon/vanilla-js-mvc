@@ -766,6 +766,8 @@ body {
     .nav__button-home:visited {
       color: #000;
       text-decoration: none; }
+    .nav--link-top-padding {
+      padding-top: 20px; }
   /* Stop ".nav"...BEM style */
   /* Non-BEM container for the learning resources */
   .single-resource-container {
@@ -815,7 +817,7 @@ body {
   /* Style <footer> */
   footer {
     position: fixed;
-    top: 460px;
+    top: 500px;
     margin-left: 22px;
     font-size: 12px;
     font-weight: 500; }

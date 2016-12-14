@@ -116,6 +116,11 @@
       }
 
     }
+
+    &--link-top-padding {
+      padding-top: 20px;
+    }
+
   }
   /* Stop ".nav"...BEM style */
 
@@ -201,7 +206,7 @@
   /* Style <footer> */
   footer {
     position: fixed;
-    top: 460px;
+    top: 500px;
     margin-left: 22px;
 
     font-size: 12px;
