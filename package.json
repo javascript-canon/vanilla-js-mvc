@@ -10,21 +10,21 @@
     "url": "https://github.com/javascript-canon/vanilla-js-mvc.git"
   },
   "scripts": {
-    "server": "nodemon -e scss,ejs,js --watch",
     "build-js": "browserify js-build/*.js | uglifyjs -mc > public/js/scripts.js",
     "build-sass": "node-sass css-build/style.scss css-build/style.css",
     "concat-css": "cat css-build/*.css > css-build/build-sandbox/css/style.css",
     "uncss-sandbox-html": "ejs-cli --base-dir views/ '*.ejs' --out css-build/build-sandbox/",
     "uncss": "grunt",
     "clean-css": "cleancss css-build/build-sandbox/css/style.css --s0 -o public/css/style.css",
+    "build-css": "npm run build-sass && npm run concat-css && npm run clean-css",
     "build": "npm run build-css && npm run build-js",
-    "watch-js": "nodemon -e js -w js-build -x 'npm run build-js'",
-    "watch-css": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run build-css'",
-    "start": "npm run server & npm run watch-js & npm run watch-css",
+    "watch-js": "nodemon -e js -w js-build -x 'npm run build-js && npm run copy-example'",
+    "watch-css": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run build-css && npm run copy-example'",
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
     "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css",
-    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/"
+    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
+    "start": "npm run watch-js & npm run watch-css"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
