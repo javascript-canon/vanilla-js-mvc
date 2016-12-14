@@ -23,7 +23,8 @@
     "start": "npm run server & npm run watch-js & npm run watch-css",
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
-    "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css"
+    "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css",
+    "copy-route": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json'  ../vanilla-js-mvc/ ../../javascript-canon/foo"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
@@ -35,13 +36,11 @@
     "node-sass": "^4.0.0",
     "nodemon": "1.11.0",
     "normalize.css": "^5.0.0",
-    "reload": "^1.1.0",
     "uglifyjs": "^2.4.10"
   },
   "dependencies": {
     "ejs": "^2.5.3",
     "express": "^4.14.0",
-    "http2": "^3.3.6",
     "jquery": "^3.1.0",
     "underscore": "^1.8.3"
   }
