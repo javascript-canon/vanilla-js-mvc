@@ -23,7 +23,7 @@
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
     "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css",
-    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
+    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json' --exclude='.git/'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
     "start": "npm run watch-js & npm run watch-css"
   },
   "devDependencies": {
