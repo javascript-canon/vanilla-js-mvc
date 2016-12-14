@@ -72,11 +72,19 @@
       cursor: pointer;
     }
 
+    &__list-item-home {
+      margin-bottom: 2px;
+      list-style-type: none;
+
+      cursor: pointer;
+    }
+
 
     &__button {
 
       &:link {
         color:#000;
+        text-decoration: none;
       }
 
       &:hover {
@@ -85,6 +93,26 @@
 
       &:visited {
         color:#000;
+        text-decoration: none;
+      }
+
+    }
+
+    &__button-home {
+
+      &:link {
+        color:#000;
+        text-decoration: none;
+      }
+
+      &:hover {
+        color:#000;
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color:#000;
+        text-decoration: none;
       }
 
     }
