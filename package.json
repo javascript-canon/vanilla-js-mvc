@@ -13,8 +13,6 @@
     "build-js": "browserify js-build/*.js | uglifyjs -mc > public/js/scripts.js",
     "build-sass": "node-sass css-build/style.scss css-build/style.css",
     "concat-css": "cat css-build/*.css > css-build/build-sandbox/css/style.css",
-    "uncss-sandbox-html": "ejs-cli --base-dir views/ '*.ejs' --out css-build/build-sandbox/",
-    "uncss": "grunt",
     "clean-css": "cleancss css-build/build-sandbox/css/style.css --s0 -o public/css/style.css",
     "build-css": "npm run build-sass && npm run concat-css && npm run clean-css",
     "build": "npm run build-css && npm run build-js",
@@ -29,9 +27,6 @@
   "devDependencies": {
     "browserify": "^13.1.1",
     "clean-css": "^3.4.21",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-uncss": "^0.6.1",
     "ncp": "^2.0.0",
     "node-sass": "^4.0.0",
     "nodemon": "1.11.0",
