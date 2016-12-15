@@ -15,10 +15,11 @@ var
     // create a view object for the homepage view...export it out later
     SingleResourceView = {},
 
+    // a <ul> tag where content will load into
     targetEl = document.getElementById("targetEl");
 
 
-/* "renderFirstPage()" method renders a single resource component. The
+/* "renderFirstPage()" method renders all the resource components. The
  * "model" parameter will represent whatever variable
  * is storing the model data, which will happen in the view's
  * controller.
@@ -28,10 +29,10 @@ var
   // Loop through the data to build elements
   for (var data in model) {
 
-      /* Only run the for...in loop if it's a property of the object
-       * AND the page has a "<div id='targetEl' />."
-       */
-       if (model.hasOwnProperty(data) && targetEl) {
+    /* Only run the for...in loop if it's a property of the object AND
+     * the page has "<div id='targetEl' />."
+     */
+    if (model.hasOwnProperty(data) && targetEl) {
 
       // Create single DOM elements for the component
       var pageTarget = targetEl,
