@@ -120,6 +120,10 @@
       background-color: #000;
     }
 
+    &__list-item-home {
+      display: inline;
+    }
+
     &__button {
       display: inline-block;
 
@@ -137,6 +141,26 @@
         color: $js-yellow;
       }
     }
+
+
+    &__button-home{
+      display: inline-block;
+
+      @include coreButton;
+
+      &:link {
+        color: $js-yellow;
+      }
+
+      &:hover {
+        color: $js-yellow;
+      }
+
+      &:visited {
+        color: $js-yellow;
+      }
+    }
+
 
     &--visible {
       width: 100%;

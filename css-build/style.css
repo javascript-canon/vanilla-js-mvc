@@ -486,6 +486,8 @@ body {
     display: inline-block;
     border-radius: 20px;
     background-color: #000; }
+  .nav__list-item-home {
+    display: inline; }
   .nav__button {
     display: inline-block;
     margin: 0 6px;
@@ -503,6 +505,24 @@ body {
     .nav__button:hover {
       color: #f9e034; }
     .nav__button:visited {
+      color: #f9e034; }
+  .nav__button-home {
+    display: inline-block;
+    margin: 0 6px;
+    padding: 10px;
+    text-decoration: none;
+    color: #f9e034;
+    background-color: #000;
+    border-radius: 16px;
+    cursor: pointer; }
+    .nav__button-home:hover {
+      color: #f9e034;
+      text-decoration: underline; }
+    .nav__button-home:link {
+      color: #f9e034; }
+    .nav__button-home:hover {
+      color: #f9e034; }
+    .nav__button-home:visited {
       color: #f9e034; }
   .nav--visible {
     width: 100%;
