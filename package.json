@@ -25,10 +25,10 @@
     "start": "npm run watch-js & npm run watch-css"
   },
   "devDependencies": {
-    "browserify": "^13.1.1",
+    "browserify": "^13.3.0",
     "clean-css": "^3.4.23",
     "ncp": "^2.0.0",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.3.0",
     "nodemon": "1.11.0",
     "normalize.css": "^5.0.0",
     "uglifyjs": "^2.4.10"
