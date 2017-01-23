@@ -20,11 +20,8 @@
   },
   "devDependencies": {
     "browserify": "^13.3.0",
-    "clean-css": "^3.4.24",
     "ncp": "^2.0.0",
-    "node-sass": "^4.3.0",
     "nodemon": "1.11.0",
-    "normalize.css": "^5.0.0",
     "uglifyjs": "^2.4.10"
   },
   "dependencies": {
