@@ -83,7 +83,7 @@ var
        */
       pageLink.setAttribute("class", "single-resource__button");
       pageLink.setAttribute("data-resource-number", model[data].id);
-      pageLink.setAttribute("href", window.location.pathname + "/" + model[data].href);
+      pageLink.setAttribute("href", window.location.pathname +  model[data].href);
       pageLink.innerHTML =  "Why it's good?";
 
       /* Arrange elements for an individual resource, then place the
