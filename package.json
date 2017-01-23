@@ -4,7 +4,7 @@
   "description": "a presentation of the most important learning JavaScript resources",
   "author": "Kai 'kaidez' Gittens",
   "license": "ISC",
-  "main": "app.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/javascript-canon/vanilla-js-mvc.git"
