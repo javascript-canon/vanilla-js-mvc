@@ -15,7 +15,7 @@
     "watch-ejs": "nodemon -e ejs -w views -w views/partials -x 'npm run copy-example'",
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
-    "copy-example": "rsync -av --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='package.json' --exclude='.git/'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
+    "copy-example": "rsync -av --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='package.json' --exclude='.git/'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
     "start": "npm run watch-js & npm run watch-ejs"
   },
   "devDependencies": {
