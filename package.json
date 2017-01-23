@@ -10,12 +10,12 @@
     "url": "https://github.com/javascript-canon/vanilla-js-mvc.git"
   },
   "scripts": {
-    "build-js": "browserify js-build/*.js | uglifyjs -mc > public/js/scripts.js",
+    "build-js": "browserify js-build/*.js | uglifyjs -mc > ../../javascript-canon/public/js/vanilla-js-mvc/scripts.js",
     "watch-js": "nodemon -e js -w js-build -x 'npm run build-js && npm run copy-example'",
     "watch-ejs": "nodemon -e ejs -w views -w views/partials -x 'npm run copy-example'",
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
-    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json' --exclude='.git/'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
+    "copy-example": "rsync -av --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='package.json' --exclude='.git/'  ../vanilla-js-mvc/ ../../javascript-canon/vanilla-js-mvc/",
     "start": "npm run watch-js & npm run watch-ejs"
   },
   "devDependencies": {
